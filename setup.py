@@ -7,7 +7,7 @@ sys.path.append("..")
 import sdist_upip
 
 setup(name='micropython-ssd1306',
-      version='0.1',
+      version='0.2',
       description='ssd1306 module for MicroPython',
       long_description="",
       url='https://github.com/stlehmann/micropython-ssd1306',
@@ -17,4 +17,4 @@ setup(name='micropython-ssd1306',
       maintainer_email='stlm@posteo.de',
       license='MIT',
       cmdclass={'sdist': sdist_upip.sdist},
-py_modules=[''])
+      py_modules=['ssd1306'])
