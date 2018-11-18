@@ -1,2 +1,2 @@
-# micropython-ssd13602
-A fork of the driver for SSD13602 displays to make it available on PyPi
+# micropython-ssd1306
+A fork of the driver for SSD1306 displays to make it available on PyPi
