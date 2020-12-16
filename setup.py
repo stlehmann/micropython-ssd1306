@@ -7,7 +7,7 @@ sys.path.append("..")
 import sdist_upip
 
 setup(name='micropython-ssd1306',
-      version='0.2',
+      version='0.3',
       description='ssd1306 module for MicroPython',
       long_description="",
       url='https://github.com/stlehmann/micropython-ssd1306',
