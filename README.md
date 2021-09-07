@@ -49,4 +49,4 @@ Now we can also write some text:
     >>> oled.show()
 
 Find more information on how to use the SSD1306 on the great [tutorial about
-the OLED featherwing from Adafruit](https://learn.adafruit.com/adafruit-oled-featherwing/circuitpython#usage-6-4).
+the OLED featherwing from Adafruit](https://learn.adafruit.com/adafruit-oled-featherwing/python-usage).
