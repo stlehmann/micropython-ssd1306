@@ -3,6 +3,14 @@
 from micropython import const
 import framebuf
 
+# Kongduino: 2023/01/08 Added rotate180
+# invert: used with rotate180. moves bits 0-7 to 7-0
+def invert(a):
+  c = 0
+  for i in range (0, 8):
+    b = (a>>i) & 1
+    c = ((c << 1) | b) & 0xff
+  return c  
 
 # register definitions
 SET_CONTRAST = const(0x81)
@@ -100,6 +108,14 @@ class SSD1306(framebuf.FrameBuffer):
         self.write_cmd(self.pages - 1)
         self.write_data(self.buffer)
 
+    # rotates the framebuffer by 180°
+    def rotate180(self):
+        last = 1023
+        for i in range(0, 512):
+            x = invert(self.buffer[i])
+            self.buffer[i] = invert(self.buffer[last])
+            self.buffer[last] = x
+            last -= 1
 
 class SSD1306_I2C(SSD1306):
     def __init__(self, width, height, i2c, addr=0x3C, external_vcc=False):
